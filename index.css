@@ -22,3 +22,7 @@
     height: 250px;
     object-fit: cover;
 }
+
+.card-text {
+    height: 150px;
+}
