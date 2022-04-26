@@ -30,7 +30,7 @@
 <header>
     <nav class="navbar  fixed-top navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">MusicTIX</a>
+            <a class="navbar-brand" href="/index.html">MusicTIX</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -39,22 +39,24 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Events</a>
+                        <a class="nav-link" href="/index.html">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Bookings</a>
+                        <a class="nav-link" href="/bookingHistory.html">Bookings</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="/createEvent.html">Create Event</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end gap-2">
                     <li class="nav-item">
                         <button class="btn btn-secondary btn-md" type="button">Register</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-success btn-md" type="button">Login</button>
+                        <button class="btn btn-success btn-md" type="button" >Login</button>
                     </li>
                 </ul>
             </div>
@@ -110,8 +112,21 @@
                     </div>
                 </div>
                 <div class="row pt-4">
+                    <div class="col justify-content-center">
+                        <div class="">
+                            <span class="position-relative ms-2">
+                                <span
+                                    class="position-absolute top-50 start-0 translate-middle p-2 bg-success border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </span>
+                            <span class="ms-3"><strong>Tickets available :</strong> 100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
                     <div class="col">
-                        <button type="button" class="btn btn-primary btn-lg">BOOK NOW</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">BOOK NOW</button>
                     </div>
                 </div>
                 <div class="row pt-5">
@@ -166,12 +181,32 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
+    </div>
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="modal-title" id="staticBackdropLabel">Book Now</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body text-center">
+                    <p><strong>Tickets available :</strong> 100</p>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Amount of tickets</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">BOOK NOW</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" data-bs-dismiss="modal">CANCEL</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
