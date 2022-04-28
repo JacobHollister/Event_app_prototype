@@ -4,6 +4,10 @@
     max-height: 300px;
     object-fit: cover;
 }
+
+#carousel {
+    animation: fadein 1s;
+}
     
 @media (min-width: 576px) {
     .carousel-item img {
@@ -25,4 +29,25 @@
 
 .card-text {
     height: 150px;
+}
+
+.container {
+    animation-name: fadein;
+    animation-delay: .5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.card {
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

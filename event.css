@@ -30,12 +30,18 @@
     height: 400px;
     width: 100vw;
     overflow: hidden;
+    animation: fadein 1s;
 }
 
 .info-container {
-        margin-left: 0;
-        height: 100%;
-        width: 100vw;
+    margin-left: 0;
+    height: 100%;
+    width: 100vw;
+    opacity: 0;
+    animation-name: fadein;
+    animation-delay: .5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 @media (min-width: 768px) {
@@ -69,4 +75,12 @@
 
 }
 
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
 
+    to {
+        opacity: 1;
+    }
+}

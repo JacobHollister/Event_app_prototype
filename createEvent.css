@@ -1,3 +1,17 @@
-.form-container{
+.form-container {
     max-width: 768px;
+}
+
+.form-container, h1, button{
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
