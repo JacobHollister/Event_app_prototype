@@ -3,7 +3,9 @@
 }
 
 .form-container, h1, button{
+    opacity: 0;
     animation: fadein 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fadein {

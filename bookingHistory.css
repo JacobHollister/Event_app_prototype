@@ -1,5 +1,7 @@
 h2, h1{
+    opacity: 0;
     animation: fadein 1s;
+    animation-fill-mode: forwards;
 }
 
 .card img {

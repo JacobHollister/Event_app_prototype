@@ -30,7 +30,9 @@
     height: 400px;
     width: 100vw;
     overflow: hidden;
+    opacity: 0;
     animation: fadein 1s;
+    animation-fill-mode: forwards;
 }
 
 .info-container {
